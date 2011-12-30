@@ -30,3 +30,6 @@ out
 
 # OSX index files
 .DS_Store
+
+# this projects build artifact
+livereload
