@@ -6,7 +6,7 @@ import (
 )
 
 var (
-	hostname *string = flag.String("hostname", "localhost", "host name")
+	hostname *string = flag.String("hostname", "", "host name")
 	port *uint = flag.Uint("port", 35729, "port number")
 )
 
