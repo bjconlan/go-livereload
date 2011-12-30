@@ -20,8 +20,9 @@ func LiveReloadServer(ws *websocket.Conn) {
 func Start(hostname string, port uint) {
 	http.HandleFunc("/", RootHandler)
 	http.Handle("/livereload", websocket.Handler(LiveReloadServer))
-	err := http.ListenAndServe(strings.Join([]string{":", strconv.Uitoa(port)}, ""), nil)
+	err := http.ListenAndServe(
+			strings.Join([]string{hostname, ":", strconv.Uitoa(port)}, ""), nil)
 	if err != nil {
-		log.Fatal("http-server.start.ListenAndServe: ", err.String())
+		log.Fatal("http_server.Start.ListenAndServe: ", err.String())
 	}
 }
