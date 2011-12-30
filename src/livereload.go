@@ -1,8 +1,16 @@
 package main
 
-import fmt "fmt"
+import (
+	"flag"
+	"livereload/http_server"
+)
+
+var (
+	hostname *string = flag.String("hostname", "localhost", "host name")
+	port *uint = flag.Uint("port", 35729, "port number")
+)
 
 func main() {
-	fmt.Printf("Hello, world; or Καλημέρα κόσμε; or こんにちは 世界\n")
+	flag.Parse()
+	http_server.Start(*hostname, *port)
 }
-

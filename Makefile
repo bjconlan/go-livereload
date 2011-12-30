@@ -1,4 +1,8 @@
-BUILDDIR=output
+# Looked into gyp, can't be bothered using it but if someone out there
+# cares I like the idea of having this 'lil' app compile on windows which
+# given the state of this Makefile requires some work...
+
+BUILDDIR=out
 CC=6g
 LD=6l
 

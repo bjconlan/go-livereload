@@ -1,0 +1,23 @@
+WHY?
+
+base64, sha1, uuid (all required for websockets) and a threaded an event 
+system and file monitoring abstractions.
+
+Yes most of these are available in c/c++ libraries via openssl, glib and
+libuv. But these are hindered by either licensing issues (I want this to
+be a simple 'tight static binary' aka, a stripped single file).
+
+Go ticks all boxes and has these features out of the box. (luajit/libuv aka
+luvit a close second)
+
+It's only when you look at what is out there that you realized how good 
+what you've got is. So to the Java developers and the amazing work everyone
+in that community has done over the last 10 odd years. To all the opensource
+project contributors THANK YOU! (not to mention the go team, Trolltech/Nokia
+(please make qt.core bsd/apache licensed one of these days) and of course
+the Gnome guys, oh and also Apple CF(lite) is something that should get more
+attention outside of osx development)
+
+Oh and to compile this you will probably have to install go (and have it's
+toolchain available in your path. on osx `brew install go` does a good job
+of this. 

@@ -1,7 +1,7 @@
 require 'rake/clean'
 require 'fileutils'
 
-BUILD_DIR = Dir.getwd + '/output'
+BUILD_DIR = Dir.getwd + '/out'
 GO = FileList['**/*.go']
 GO_6  = GO.ext('6')
 
