@@ -6,7 +6,7 @@ BUILDDIR=out
 CC=6g
 LD=6l
 
-# Order specific
+# Order specific!
 OBJS=${BUILDDIR}/livereload/http_server.6 \
      ${BUILDDIR}/livereload.6
 
