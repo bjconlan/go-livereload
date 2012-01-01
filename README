@@ -20,4 +20,7 @@ that should get more attention outside of osx development)
 
 Oh and to compile this you will probably have to install go (and have it's
 toolchain available in your path. on osx `brew install go` does a good job
-of this. 
+of this.
+
+NOTE to build you will need to build agains the go tip (thanks to lack of hybi
+websocket support in the current release tag - as of 1/1/2012)
