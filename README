@@ -23,4 +23,6 @@ toolchain available in your path. on osx `brew install go` does a good job
 of this.
 
 NOTE to build you will need to build agains the go tip (thanks to lack of hybi
-websocket support in the current release tag - as of 1/1/2012)
+websocket support in the current release tag - as of 1/1/2012) and apply the
+patch located at: http://codereview.appspot.com/5304046/. NOTE you will have
+to massage the makefile by hand to have it patch correctly.
