@@ -6,23 +6,19 @@ BUILDDIR=out
 CC=6g
 LD=6l
 
-#${BUILDDIR}/exp/fsnotify/fsnotify.linux.6
 # Order specific!
 OBJS=${BUILDDIR}/exp/fsnotify/fsnotify.6 \
-     ${BUILDDIR}/livereload/http_server.6 \
      ${BUILDDIR}/livereload.6
 
 all: livereload
 
 init:
-	mkdir -p ${BUILDDIR}/livereload
-
-#tmp build 
-${BUILDDIR}/exp/fsnotify/fsnotify.6:
 	mkdir -p ${BUILDDIR}/exp/fsnotify
-	$(CC) -o ${BUILDDIR}/exp/fsnotify/fsnotify.6 src/exp/fsnotify/fsnotify.go src/exp/fsnotify/fsnotify_bsd.go
 
-${BUILDDIR}/%.6 : src/%.go ${BUILDDIR}/exp/fsnotify/fsnotify.6 init
+${BUILDDIR}/exp/fsnotify/fsnotify.6: init
+	$(CC) -o ${BUILDDIR}/exp/fsnotify.6 src/exp/fsnotify/fsnotify.go src/exp/fsnotify/fsnotify_bsd.go
+
+${BUILDDIR}/%.6 : src/%.go ${BUILDDIR}/exp/fsnotify/fsnotify.6
 	$(CC) -o $@ -I ${BUILDDIR} $<
 
 livereload: ${OBJS}
